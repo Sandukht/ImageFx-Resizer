@@ -47,16 +47,33 @@ The application uses a JSON configuration to define image processing jobs. Examp
     }
   ]
 }
+````
+
+* `name` – filename of the image to process.
+* `effects` – list of effects to apply.
+* `parameter` – optional parameters for specific effects.
+
+---
+
 ## Running the Application
 
 Place your images in the project folder and run the application with the filenames as arguments:
 
+```bash
 dotnet run -- Image#1.jpg Image#2.jpg Image#3.jpg
+```
+
+* The application will process only the images specified in the command line.
+* Processed images are saved in the same folder with `_out.jpg` appended to the filename.
+
+---
 
 ## Example Output
 
 Processed images:
 
-Image#1_out.jpg
-Image#2_out.jpg
-Image#3_out.jpg
+* `Image#1_out.jpg`
+* `Image#2_out.jpg`
+* `Image#3_out.jpg`
+
+```
